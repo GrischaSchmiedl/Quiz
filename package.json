@@ -1,8 +1,8 @@
 {
   "name": "Quiz",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "1.0.1",
+  "author": "Grischa Schmiedl",
+  "homepage": "https:mobile.fhstp.ac.at",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -64,5 +64,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.6.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic dmeo project"
 }
