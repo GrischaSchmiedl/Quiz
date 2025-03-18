@@ -66,4 +66,11 @@ export class DataService {
     }
   }
 
+  getShuffledQuestions(): Question[] {
+    //copy array to new array
+    let shuffled = this.currentQuiz.questions.slice();
+    //shuffle the new array
+    return shuffled.sort(() => Math.random() - 0.5);
+  }
+
 }

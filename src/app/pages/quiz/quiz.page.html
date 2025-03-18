@@ -1,13 +1,40 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>Quiz</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Quiz</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  @if (currentNumber>=0) {
+
+      <ion-label>Frage {{currentNumber+1}}:</ion-label>
+      <br><br>
+      <ion-label>Punkte: {{points}}</ion-label>
+      <br><br>
+      <ion-label><h2>{{currentQuestion?.title}}</h2></ion-label>
+      <br><br>
+      <ion-button expand="block" fill="outline"  (click)="Antwort(1);">
+        {{currentQuestion?.a1}}
+      </ion-button>
+
+      <ion-button expand="block" fill="outline" (click)="Antwort(2);">
+        {{currentQuestion?.a2}}
+      </ion-button>
+
+      <ion-button expand="block" fill="outline"  (click)="Antwort(3);">
+        {{currentQuestion?.a3}}
+      </ion-button>
+
+      <ion-button expand="block" fill="outline"  (click)="Antwort(4);">
+        {{currentQuestion?.a4}}
+      </ion-button>
+
+  } 
+  @else {
+    <h1>{{points}} von {{data.currentQuiz.questions.length}} Punkten erreicht.</h1>
+  } 
 </ion-content>
